@@ -11,41 +11,41 @@ def parse_args():
         '--batch_size',
         type=int,
         default=64,
-        help='Batch size to be used in training')
+        help='Batch size to be used in training. Defaults to 64.')
     parser.add_argument(
         '--steps',
         type=int,
         default=10000,
-        help='Number of training steps to be performed')
+        help='Number of training steps to be performed. Defaults to 10 thousand.')
     parser.add_argument(
         '--infer',
         help=
-        'Performs inference for all images in the samples directory using the latest stored model',
+        'Performs inference for all images in the samples directory using the latest stored model.',
         action='store_true')
     parser.add_argument(
         '--log_dir',
         default='log',
-        help='Directory where all the log files reside')
+        help='Directory where all the log files reside. Defaults to log.')
     parser.add_argument(
         '--model_dir',
         default='checkpoint',
-        help='Directory where the trained model is saved')
+        help='Directory where the trained model is saved. Defaults to checkpoint.')
     parser.add_argument(
         '--samples_dir',
         default='samples',
-        help='Directory of the images used for validation/inference')
+        help='Directory of the images used for validation/inference. Defaults to samples.')
     parser.add_argument(
         '--output_dir',
         default='output',
-        help='Directory where the output of the inference will be stored')
+        help='Directory where the output of the inference will be stored. Defaults to output.')
     parser.add_argument(
         '--no_glasses_dir',
         default='training',
-        help='Directory of the images without glasses for training')
+        help='Directory of the images without glasses for training. Defaults to training.')
     parser.add_argument(
         '--glasses_dir',
         default='noise',
-        help='Directory of the images with glasses for training')
+        help='Directory of the images with glasses for training. Defaults to noise.')
 
     return parser.parse_args()
 
