@@ -67,8 +67,8 @@ def main():
             network = GRGAN([128, 128, 1], 5e-6, 2e-4, 1)
             # Builds gan model
             network.build_model(
-                glob.glob(glasses_dir + '/*.jpg'),
-                glob.glob(no_glasses_dir + '/*.jpg'),
+                glob.glob(samples_dir + '/*.jpg'),
+                glob.glob(samples_dir + '/*.jpg'),
                 glob.glob(samples_dir + '/*.jpg'))
             # Gets number of images that need to be inferred
             n = len(glob.glob(samples_dir + '/*.jpg'))
